@@ -1,0 +1,44 @@
+{
+  "name": "@signalk/mayara-radar",
+  "version": "0.1.0",
+  "description": "Marine radar plugin for SignalK - detects and streams data from Furuno, Navico, Raymarine, and Garmin radars",
+  "keywords": [
+    "signalk-node-server-plugin",
+    "signalk-wasm-plugin",
+    "radar",
+    "marine",
+    "furuno",
+    "navico",
+    "raymarine",
+    "garmin"
+  ],
+  "author": "Mayara Project <https://github.com/keesverruijt/mayara>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keesverruijt/mayara.git",
+    "directory": "mayara-signalk-wasm"
+  },
+  "bugs": {
+    "url": "https://github.com/keesverruijt/mayara/issues"
+  },
+  "homepage": "https://github.com/keesverruijt/mayara#readme",
+  "files": [
+    "plugin.wasm",
+    "README.md"
+  ],
+  "wasmManifest": "plugin.wasm",
+  "wasmCapabilities": {
+    "rawSockets": true,
+    "dataWrite": true,
+    "storage": "vfs-only"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "cargo build --target wasm32-wasip1 --release && copy ..\\target\\wasm32-wasip1\\release\\mayara_signalk_wasm.wasm plugin.wasm",
+    "build:unix": "cargo build --target wasm32-wasip1 --release && cp ../target/wasm32-wasip1/release/mayara_signalk_wasm.wasm plugin.wasm",
+    "prepublishOnly": "npm run build"
+  }
+}

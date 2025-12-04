@@ -28,7 +28,7 @@ The code shall:
 
 The following radars are fully supported right now:
 
-* Navico: all digital models e.g. BR24, 3G, 4G, HALO20, HALO24, HALO3/4/6, HALO3000+. 
+* Navico: all digital models e.g. BR24, 3G, 4G, HALO20, HALO24, HALO3/4/6, HALO3000+.
 
 Full support is planned for:
 

@@ -1,0 +1,30 @@
+# Rust source files (only ship the compiled WASM)
+src/
+Cargo.toml
+Cargo.lock
+
+# Build artifacts
+target/
+*.rs
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Development files
+.gitignore
+.cargo/
+
+# Test files
+tests/
+*.test.*
+
+# Documentation source (README.md is included via "files")
+docs/
