@@ -1,3 +1,8 @@
 .DS_Store
 /target
 demo/work
+.vscode 
+
+
+# builds 
+*.tgz
